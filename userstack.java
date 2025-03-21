@@ -32,7 +32,7 @@ public class userstack
             System.out.println("Stack is empty");
             return -1;
         }
-        int poppedelement = stackArray[top];
+        int poppedelement = stackArray[top--];
         System.out.println("Popped from the stack " + poppedelement);
         return poppedelement;
         
@@ -44,6 +44,12 @@ public class userstack
             return -1;
         }
         return stackArray[top];
+    }
+    public void show(){
+        for(int i = 0; i <= top; i++){
+            System.out.print(stackArray[i] + " ");
+        }
+        System.out.println();
     }
     
     public boolean isEmpty(){
@@ -70,11 +76,12 @@ public class userstack
             arr[i] = Integer.parseInt(Br.readLine());
             theStack.push(arr[i]);
         }        
+        theStack.show();
+        theStack.pop();
+        theStack.pop();
+        theStack.show();
 
         System.out.println("Top Element of the stack is " + theStack.top());
-        
-        theStack.pop();
-        theStack.pop();
 
         System.out.println("is stack empty? " + theStack.isEmpty());
         System.out.println("is stack full? " + theStack.isFull());
