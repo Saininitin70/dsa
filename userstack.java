@@ -87,4 +87,4 @@ public class userstack
         System.out.println("is stack full? " + theStack.isFull());
         
         }
-    }
+    }    
